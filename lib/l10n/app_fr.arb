@@ -1,0 +1,7 @@
+{
+  "language": "Français",
+  "@language": {
+    "description": "La langue actuelle"
+  },
+  "hello": "Bonjour"
+}
