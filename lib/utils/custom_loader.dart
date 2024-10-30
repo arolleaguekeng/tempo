@@ -15,7 +15,7 @@ class _CustomLoaderState extends State<CustomLoader> {
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: LoadingAnimationWidget.staggeredDotsWave(
+        child: LoadingAnimationWidget.fallingDot(
       color: widget.color,
       size: widget.size,
     ));

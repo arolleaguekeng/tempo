@@ -1,4 +1,5 @@
 {
+  "@@locale": "fr",
   "language": "Français",
   "@language": {
     "description": "La langue actuelle"

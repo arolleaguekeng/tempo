@@ -25,35 +25,32 @@ import 'package:provider/provider.dart';
 import 'package:tempo/theme/theme_manager.dart';
 
 // Colors used in this app
-const primaryColor = Color.fromRGBO(111, 82, 234, 1.0);
-const secondaryColor = Color.fromRGBO(42, 173, 173, 1.0);
-const bgColor = Color.fromRGBO(255, 255, 255, 1.0);
+const primaryColor = Color.fromRGBO(51, 171, 189, 1);
+const secondaryColor = Color.fromRGBO(0, 0, 0, 1);
+const bgColor = tonGray2;
+const bgDarkColor = darkTone;
 
 const darkTone = Color.fromRGBO(25, 25, 28, 1.0);
 const darkTon1 = Color.fromRGBO(25, 25, 28, 1.0);
 const darkTon2 = Color.fromRGBO(25, 25, 28, 1.0);
 const darkTon3 = Color.fromRGBO(35, 37, 47, 1.0);
 
-const lightIconBg = Color.fromRGBO(238, 238, 238, 1.0);
-const messgaeSucces = Color.fromRGBO(221, 251, 226, 1.0);
-const darkIconBg = darkTon3;
-const transparent = Colors.transparent;
+const tonGray5 = Color.fromRGBO(108, 118, 138, 1.0);
+const tonGray4 = Color.fromRGBO(160, 171, 192, 1.0);
+const tonGray3 = Color.fromRGBO(184, 191, 204, 1.0);
+const tonGray2 = Color.fromRGBO(234, 236, 240, 1.0);
+const tonGray1 = Color.fromRGBO(248, 248, 248, 1.0);
 
 const textColor = Colors.black;
 const textLightColor = Color.fromRGBO(184, 191, 204, 1.0);
 
+const transparent = Colors.transparent;
 const grey = Color.fromRGBO(148, 170, 220, 1);
 const white = Color.fromRGBO(255, 255, 255, 1.0);
 const purple = Color.fromRGBO(165, 80, 179, 1);
 const orange = Color.fromRGBO(251, 137, 13, 1);
 const green = Color.fromRGBO(43, 169, 119, 1.0);
 const red = Colors.red;
-
-const tonGray5 = Color.fromRGBO(108, 118, 138, 1.0);
-const tonGray4 = Color.fromRGBO(160, 171, 192, 1.0);
-const tonGray3 = Color.fromRGBO(184, 191, 204, 1.0);
-const tonGray2 = Color.fromRGBO(234, 236, 240, 1.0);
-const tonGray1 = Color.fromRGBO(248, 248, 248, 1.0);
 
 TextTheme textTheme(BuildContext context) {
   return Theme.of(context).textTheme;

@@ -11,7 +11,7 @@ class TabBarWidget extends StatefulWidget {
     super.key,
     required this.tabs,
     required this.children,
-     this.controller,
+    this.controller,
     required this.initialIndex,
   });
 
@@ -19,7 +19,8 @@ class TabBarWidget extends StatefulWidget {
   State<TabBarWidget> createState() => _TabBarWidgetState();
 }
 
-class _TabBarWidgetState extends State<TabBarWidget> with SingleTickerProviderStateMixin {
+class _TabBarWidgetState extends State<TabBarWidget>
+    with SingleTickerProviderStateMixin {
   TabController? controller;
   @override
   void initState() {
@@ -27,34 +28,33 @@ class _TabBarWidgetState extends State<TabBarWidget> with SingleTickerProviderSt
     controller = TabController(vsync: this, length: widget.tabs.length);
     controller!.animateTo(widget.initialIndex);
   }
+
   @override
   Widget build(BuildContext context) {
-
     return DefaultTabController(
-        length: widget.tabs.length,
-        child: Scaffold(
-          appBar: AppBar(
-            shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(16))),
-            centerTitle: true,
-            leading: null,
-            automaticallyImplyLeading: false,
-            backgroundColor: themeIsDark(context) ? darkIconBg : lightIconBg,
-            title: TabBar(
-              tabAlignment: TabAlignment.center,
-              isScrollable: true,
-              indicatorColor: primaryColor,
-              indicatorWeight: 3,
-              tabs: widget.tabs,
-            ),
-            elevation: 0,
+      length: widget.tabs.length,
+      child: Scaffold(
+        appBar: AppBar(
+          shape: const RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(16))),
+          centerTitle: true,
+          leading: null,
+          automaticallyImplyLeading: false,
+          backgroundColor: themeIsDark(context) ? bgDarkColor : bgColor,
+          title: TabBar(
+            tabAlignment: TabAlignment.center,
+            isScrollable: true,
+            indicatorColor: primaryColor,
+            indicatorWeight: 3,
+            tabs: widget.tabs,
           ),
-
-          body: TabBarView(
-            controller: widget.controller,
-            children: widget.children,
-          ),
+          elevation: 0,
         ),
-      );
+        body: TabBarView(
+          controller: widget.controller,
+          children: widget.children,
+        ),
+      ),
+    );
   }
 }
