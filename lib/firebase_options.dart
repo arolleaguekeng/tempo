@@ -63,6 +63,6 @@ class DefaultFirebaseOptions {
     messagingSenderId: '98074273104',
     projectId: 'tempoai',
     storageBucket: 'tempoai.appspot.com',
-    iosBundleId: 'com.devpea.tempo.tempo',
+    iosBundleId: 'com.devpea.tempo',
   );
 }

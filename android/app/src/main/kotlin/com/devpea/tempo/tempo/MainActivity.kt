@@ -1,4 +1,4 @@
-package com.devpea.tempo.tempo
+package com.devpea.tempo
 
 import io.flutter.embedding.android.FlutterActivity
 
