@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "98074273104",
+    "project_id": "tempoai",
+    "storage_bucket": "tempoai.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98074273104:android:a67685e63a57b2e525f855",
+        "android_client_info": {
+          "package_name": "com.devpea.tempo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7OZz2cwtWu7B-DoHkiil0zXVRgOWybF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

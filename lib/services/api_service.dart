@@ -1,5 +1,4 @@
 class api_services{
-//matoa-api.staging.rhopenlabs-internal.africa
 // 10.0.2.2:5278
   static String simpleUrl ="10.0.2.2:5278";
   static String baseUrl = '$simpleUrl/api/v1';
