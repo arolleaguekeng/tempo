@@ -41,7 +41,7 @@ const tonGray3 = Color.fromRGBO(184, 191, 204, 1.0);
 const tonGray2 = Color.fromRGBO(234, 236, 240, 1.0);
 const tonGray1 = Color.fromRGBO(248, 248, 248, 1.0);
 
-const textColor = Colors.black;
+const textColor = Color.fromARGB(255, 55, 50, 50);
 const textLightColor = Color.fromRGBO(184, 191, 204, 1.0);
 
 const transparent = Colors.transparent;
@@ -49,8 +49,8 @@ const grey = Color.fromRGBO(148, 170, 220, 1);
 const white = Color.fromRGBO(255, 255, 255, 1.0);
 const purple = Color.fromRGBO(165, 80, 179, 1);
 const orange = Color.fromRGBO(251, 137, 13, 1);
-const green = Color.fromRGBO(43, 169, 119, 1.0);
-const red = Colors.red;
+const green = Color.fromRGBO(3, 176, 107, 1);
+const red = Color.fromARGB(255, 242, 100, 90);
 
 TextTheme textTheme(BuildContext context) {
   return Theme.of(context).textTheme;

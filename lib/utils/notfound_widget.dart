@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'constants.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'helper_widgets.dart';
 
 class NotFoundWidget extends StatefulWidget {
@@ -24,7 +24,7 @@ class _NotFoundWidgetState extends State<NotFoundWidget> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          addVerticalSpace(appPadding),
+          addVerticalSpace(height: appPadding),
           Image.asset(
             widget.image,
             height: 150,
@@ -39,7 +39,7 @@ class _NotFoundWidgetState extends State<NotFoundWidget> {
             ),
             textAlign: TextAlign.center,
           ),
-          addVerticalSpace(appPadding),
+          addVerticalSpace(height: appPadding),
           InkWell(
             onTap: widget.action,
             child: Container(

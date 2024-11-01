@@ -26,6 +26,7 @@ Future<void> main() async {
       ChangeNotifierProvider(
         create: (context) => LocaleProvider(),
       ),
+      
     ],
     builder: (context, _) {
       final localeProvider = Provider.of<LocaleProvider>(context);
@@ -38,7 +39,7 @@ Future<void> main() async {
         theme: lightTheme,
         darkTheme: darkTheme,
         routes: <String, WidgetBuilder>{
-          MyApp.routeName: (_) => MyApp(),
+          MyApp.routeName: (_) => const MyApp(),
         },
         debugShowCheckedModeBanner: false,
         supportedLocales: L10n.all,
@@ -61,6 +62,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: Center(
+        child: SizedBox(
+          width: 200,
+          child: Image.asset(
+            "assets/icons/logo_dark.png",
+          ),
+        ),
+      ),
+    );
   }
 }
