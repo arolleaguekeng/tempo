@@ -4,5 +4,7 @@
   "@language": {
     "description": "The current Language"
   },
-  "hello": "Hello"
+  "hello": "Hello",
+  "home":"Home",
+  "library":"Library"
 }

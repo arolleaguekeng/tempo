@@ -4,6 +4,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 import 'l10n/l10n.dart';
+import 'modules/navigation.dart';
 import 'services/api_service.dart';
 import 'theme/theme_constants.dart';
 import 'theme/theme_manager.dart';
@@ -26,7 +27,6 @@ Future<void> main() async {
       ChangeNotifierProvider(
         create: (context) => LocaleProvider(),
       ),
-      
     ],
     builder: (context, _) {
       final localeProvider = Provider.of<LocaleProvider>(context);
@@ -39,7 +39,7 @@ Future<void> main() async {
         theme: lightTheme,
         darkTheme: darkTheme,
         routes: <String, WidgetBuilder>{
-          MyApp.routeName: (_) => const MyApp(),
+          NavigationScreen.routeName: (_) => const NavigationScreen(),
         },
         debugShowCheckedModeBanner: false,
         supportedLocales: L10n.all,
