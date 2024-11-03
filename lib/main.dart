@@ -4,7 +4,10 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
 import 'l10n/l10n.dart';
+
+import 'modules/onboardin/page/launch_screen.dart';
 import 'modules/navigation.dart';
+
 import 'services/api_service.dart';
 import 'theme/theme_constants.dart';
 import 'theme/theme_manager.dart';
@@ -62,6 +65,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    return LaunchScreen();
     return Scaffold(
       body: Center(
         child: SizedBox(
@@ -72,5 +76,6 @@ class MyApp extends StatelessWidget {
         ),
       ),
     );
+
   }
 }

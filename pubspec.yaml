@@ -111,6 +111,8 @@ dependencies:
 
   # A package to render SVG files in Flutter applications.
   flutter_svg: ^2.0.10+1
+  # A package to slide carousel.
+  carousel_slider: ^5.0.0
 
   # A package to manage google sign-in in Flutter applications.
   google_sign_in: ^6.2.1
