@@ -15,6 +15,7 @@ import 'utils/providers/local_provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
+String currentLanguage = 'en';
 Future<void> main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
@@ -34,7 +35,6 @@ Future<void> main() async {
     builder: (context, _) {
       final localeProvider = Provider.of<LocaleProvider>(context);
       final themeProvider = Provider.of<ThemeManager>(context);
-
       return MaterialApp(
         locale: localeProvider.locale,
         title: "Tempo",
@@ -42,7 +42,7 @@ Future<void> main() async {
         theme: lightTheme,
         darkTheme: darkTheme,
         routes: <String, WidgetBuilder>{
-          NavigationScreen.routeName: (_) => const NavigationScreen(),
+          LaunchScreen.routeName: (_) => const LaunchScreen(),
         },
         debugShowCheckedModeBanner: false,
         supportedLocales: L10n.all,
@@ -56,26 +56,4 @@ Future<void> main() async {
     },
   ));
   FlutterNativeSplash.remove();
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  static String currentLanguage = "en";
-  static const String routeName = '/';
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return LaunchScreen();
-    return Scaffold(
-      body: Center(
-        child: SizedBox(
-          width: 200,
-          child: Image.asset(
-            "assets/icons/logo_dark.png",
-          ),
-        ),
-      ),
-    );
-
-  }
 }

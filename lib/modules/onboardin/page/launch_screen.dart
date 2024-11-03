@@ -5,6 +5,8 @@ import 'package:tempo/modules/onboardin/services/onboarding_service.dart';
 import 'package:tempo/utils/constants.dart';
 
 class LaunchScreen extends StatefulWidget {
+  static var routeName = "/";
+
   const LaunchScreen({super.key});
 
   @override
