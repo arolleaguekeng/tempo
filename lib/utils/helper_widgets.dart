@@ -23,7 +23,7 @@ import 'responsive.dart';
 /// ```dart
 /// addVerticalSpace(20),
 /// ```
-Widget addVerticalSpace(double height) {
+Widget addVerticalSpace({double height = appPadding}) {
   return SizedBox(
     height: height,
   );
@@ -36,9 +36,9 @@ Widget addVerticalSpace(double height) {
 /// Example usage:
 ///
 /// ```dart
-/// addHorizontalSpace(20),
+/// addHorizontalSpace(),
 /// ```
-Widget addHorizontalSpace(double width) {
+Widget addHorizontalSpace({double width = appPadding}) {
   return SizedBox(
     width: width,
   );
@@ -178,7 +178,7 @@ AppBar CustomAppBar({
   return AppBar(
     titleSpacing: 0,
     centerTitle: centerTitle,
-    foregroundColor: themeIsDark(context) ? white : white,
+    foregroundColor: white,
     elevation: 0,
     backgroundColor: primaryColor,
     leadingWidth: 60,
@@ -194,7 +194,7 @@ AppBar CustomAppBar({
             )),
     title: Row(
       children: [
-        if (centerTitle == false) addHorizontalSpace(appPadding),
+        if (centerTitle == false) addHorizontalSpace(width: appPadding),
         Text(
           title,
           style: const TextStyle(
@@ -204,7 +204,7 @@ AppBar CustomAppBar({
         ),
       ],
     ),
-    actions: [if (popupMenu != null) popupMenu, addHorizontalSpace(8)],
+    actions: [if (popupMenu != null) popupMenu, addHorizontalSpace(width: 8)],
   );
 }
 

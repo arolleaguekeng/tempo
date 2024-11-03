@@ -10,11 +10,10 @@ import 'package:http/http.dart' as http;
 
 void messageDialog(
     {required IconData icon,
-      required BuildContext context,
-      required String text,
-      required Color iconColor,
-      required Color bgColor
-    }) {
+    required BuildContext context,
+    required String text,
+    required Color iconColor,
+    required Color bgColor}) {
   var fToast = FToast();
   // if you want to use context from globally instead of content we need to pass navigatorKey.currentContext!
   fToast.init(context);
@@ -27,95 +26,115 @@ void messageDialog(
     child: Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Expanded(flex: 1,child: Icon(icon, color: white,)),
+        Expanded(
+            flex: 1,
+            child: Icon(
+              icon,
+              color: white,
+            )),
         const SizedBox(
           width: 12.0,
         ),
         Expanded(
           flex: 8,
-          child: AutoSizeText(text, maxLines: 3,style: const TextStyle(
-            color: white
-          ),),
+          child: AutoSizeText(
+            text,
+            maxLines: 3,
+            style: const TextStyle(color: white),
+          ),
         ),
       ],
     ),
   );
   fToast.showToast(
-      child: toast,
-      toastDuration: const Duration(seconds: 2),
-      // positionedToastBuilder: (context, child) {
-      //   return Positioned(
-      //     top: 16.0,
-      //     left: 16.0,
-      //     child: child,
-      //   );
-      // }
-      );
+    child: toast,
+    toastDuration: const Duration(seconds: 2),
+    // positionedToastBuilder: (context, child) {
+    //   return Positioned(
+    //     top: 16.0,
+    //     left: 16.0,
+    //     child: child,
+    //   );
+    // }
+  );
 }
 
-
-void succesDialod(BuildContext context, String message){
+void succesDialod(BuildContext context, String message) {
   messageDialog(
       icon: Icons.check_circle_outline,
       text: "Succesfull operation",
-      iconColor: primaryColor, context: context, bgColor: green);
+      iconColor: primaryColor,
+      context: context,
+      bgColor: green);
 }
 
-void errorDialog(BuildContext context,String message){
+void errorDialog(BuildContext context, String message) {
   messageDialog(
       icon: Icons.error_outline,
       text: message,
-      iconColor: Colors.red,context: context, bgColor: red);
+      iconColor: Colors.red,
+      context: context,
+      bgColor: red);
 }
 
-
-
-void apiSuccesDialod(BuildContext context, http.Response? response){
+void apiSuccesDialod(BuildContext context, http.Response? response) {
   messageDialog(
       icon: Icons.check_circle_outline,
       text: "Succesfull operation",
-      iconColor: primaryColor, context: context, bgColor: green);
+      iconColor: primaryColor,
+      context: context,
+      bgColor: green);
 }
 
-void apiErrorDialog(BuildContext context,http.Response? response){
+void apiErrorDialog(BuildContext context, http.Response? response) {
   messageDialog(
       icon: Icons.error_outline,
       text: jsonDecode(response!.body)["errors"].keys.first,
-      iconColor: Colors.red,context: context, bgColor: red);
+      iconColor: Colors.red,
+      context: context,
+      bgColor: red);
 }
 
-
-
-void apiErrorCustomDialog(BuildContext context, String text){
+void apiErrorCustomDialog(BuildContext context, String text) {
   messageDialog(
       icon: Icons.error_outline,
       text: text,
-      iconColor: Colors.red,context: context, bgColor: red);
+      iconColor: Colors.red,
+      context: context,
+      bgColor: red);
 }
 
-void apiServerErrorDialog(BuildContext context,http.Response? response){
+void apiServerErrorDialog(BuildContext context, http.Response? response) {
   messageDialog(
       icon: Icons.error_outline,
       text: "An error occured on the server",
-      iconColor: Colors.red, context: context, bgColor: red);
+      iconColor: Colors.red,
+      context: context,
+      bgColor: red);
 }
 
-void apiNoInternetDialog(BuildContext context, http.Response? response){
+void apiNoInternetDialog(BuildContext context, http.Response? response) {
   messageDialog(
       icon: Icons.wifi_off,
       text: "No internet connection",
-      iconColor: Colors.red, context: context, bgColor: red);
+      iconColor: Colors.red,
+      context: context,
+      bgColor: red);
 }
 
 void informationDialog(
-    {required BuildContext  context, required String text, IconData icon = Icons.info_outline}){
+    {required BuildContext context,
+    required String text,
+    IconData icon = Icons.info_outline}) {
   messageDialog(
       icon: icon,
       text: text,
-      iconColor: primaryColor,context: context, bgColor: secondaryColor);
+      iconColor: primaryColor,
+      context: context,
+      bgColor: secondaryColor);
 }
 
-Widget successContainer(BuildContext context){
+Widget successContainer(BuildContext context) {
   return Container(
     height: 200,
     padding: const EdgeInsets.all(appPadding),
@@ -127,16 +146,15 @@ Widget successContainer(BuildContext context){
           color: primaryColor,
           size: 40,
         ),
-        addVerticalSpace(appPadding),
+        addVerticalSpace(height: appPadding),
         const Text("Succesfull operation"),
-        addVerticalSpace(appPadding),
+        addVerticalSpace(height: appPadding),
       ],
     ),
   );
 }
 
-
-Widget errorContainer(BuildContext context){
+Widget errorContainer(BuildContext context) {
   return Container(
     height: 200,
     padding: const EdgeInsets.all(appPadding),
@@ -148,15 +166,15 @@ Widget errorContainer(BuildContext context){
           color: Colors.red,
           size: 40,
         ),
-        addVerticalSpace(appPadding),
+        addVerticalSpace(height: appPadding),
         const Text("An error occured"),
-        addVerticalSpace(appPadding),
+        addVerticalSpace(height: appPadding),
       ],
     ),
   );
 }
 
-Widget notFoundContainer(BuildContext context){
+Widget notFoundContainer(BuildContext context) {
   return Container(
     height: 200,
     padding: const EdgeInsets.all(appPadding),
@@ -168,15 +186,15 @@ Widget notFoundContainer(BuildContext context){
           color: Colors.red,
           size: 40,
         ),
-        addVerticalSpace(appPadding),
+        addVerticalSpace(height: appPadding),
         const Text("Not found items"),
-        addVerticalSpace(appPadding),
+        addVerticalSpace(height: appPadding),
       ],
     ),
   );
 }
 
-Widget serverErrorContainer(BuildContext context){
+Widget serverErrorContainer(BuildContext context) {
   return Container(
     height: 200,
     padding: const EdgeInsets.all(appPadding),
@@ -188,15 +206,15 @@ Widget serverErrorContainer(BuildContext context){
           color: Colors.red,
           size: 40,
         ),
-        addVerticalSpace(appPadding),
+        addVerticalSpace(height: appPadding),
         const Text("Server error occured"),
-        addVerticalSpace(appPadding),
+        addVerticalSpace(height: appPadding),
       ],
     ),
   );
 }
 
-Widget noInternetContainer(BuildContext context){
+Widget noInternetContainer(BuildContext context) {
   return Container(
     height: 200,
     padding: const EdgeInsets.all(appPadding),
@@ -208,22 +226,21 @@ Widget noInternetContainer(BuildContext context){
           color: Colors.red,
           size: 40,
         ),
-        addVerticalSpace(appPadding),
+        addVerticalSpace(height: appPadding),
         const Text("No internet connection"),
-        addVerticalSpace(appPadding),
+        addVerticalSpace(height: appPadding),
       ],
     ),
   );
 }
 
-
-
-Future<void> showMessages(BuildContext context,http.Response? response) async {
-  if(response == null){
+Future<void> showMessages(BuildContext context, http.Response? response) async {
+  if (response == null) {
     apiNoInternetDialog(context, response);
-  }
-  else{
-    if (response.statusCode == 400 || response.statusCode == 403 || response.statusCode == 409 ) {
+  } else {
+    if (response.statusCode == 400 ||
+        response.statusCode == 403 ||
+        response.statusCode == 409) {
       apiErrorDialog(context, response);
     }
     if (response.statusCode == 500) {
@@ -235,9 +252,9 @@ Future<void> showMessages(BuildContext context,http.Response? response) async {
   }
 }
 
-Widget showMessagesTexts(BuildContext context,http.Response? response) {
-  if(response == null){
-   return noInternetContainer(context);
+Widget showMessagesTexts(BuildContext context, http.Response? response) {
+  if (response == null) {
+    return noInternetContainer(context);
   }
   if (response.statusCode == 400) {
     return errorContainer(context);
