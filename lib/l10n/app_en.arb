@@ -6,5 +6,7 @@
   },
   "hello": "Hello",
   "home":"Home",
-  "library":"Library"
+  "library":"Library",
+  "tempotitle":"New Tempo",
+  "tempo_text_button":"Photos"
 }

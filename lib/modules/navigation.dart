@@ -4,6 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:tempo/theme/theme_constants.dart';
 
 import '../utils/constants.dart';
+import 'music_generator/pages/tempochoice.dart';
 
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({super.key});
@@ -53,11 +54,14 @@ class _NavigationScreenState extends State<NavigationScreen> {
             label: AppLocalizations.of(context)!.home,
           ),
           ElevatedButton(
-            onPressed: () {},
-            child: Icon(
-              Icons.add,
-              color: white,
-            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const Tempochoice(),
+                ),
+              );
+            },
             style: ElevatedButton.styleFrom(
               shape: const CircleBorder(),
               padding: const EdgeInsets.all(20),
@@ -65,6 +69,10 @@ class _NavigationScreenState extends State<NavigationScreen> {
               backgroundColor: primaryColor,
               // Splash color
               foregroundColor: white,
+            ),
+            child: const Icon(
+              Icons.add,
+              color: white,
             ),
           ),
           NavigationDestination(
