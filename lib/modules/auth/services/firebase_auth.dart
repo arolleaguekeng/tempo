@@ -53,7 +53,14 @@ class AuthService {
   }
 
   static void saveUser(User googleUser) {
-    // TODO: implement saveUser
+    final user =
+        FirebaseFirestore.instance.collection('users').doc(googleUser.uid);
+    user.set({
+      'email': googleUser.email,
+      'name': googleUser.displayName,
+      'photoUrl': googleUser.photoURL,
+      'lastSeen': DateTime.now(),
+    }, SetOptions(merge: true));
   }
 
   /// Logout connected [User]

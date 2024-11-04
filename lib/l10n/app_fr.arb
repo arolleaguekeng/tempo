@@ -5,8 +5,13 @@
     "description": "La langue actuelle"
   },
   "hello": "Bonjour",
-  "home":"Accueil",
-  "library":"Librairie",
-  "tempotitle":"Nouveau Tempo",
-  "tempo_text_button":"Photos"
+  "navigation_home":"Accueil",
+  "navigation_library":"Librairie",
+  "tempochoice_page_appbar_title":"Nouveau Tempo",
+  "tempochoice_page_appbar_text_button":"Photos",
+  "tempochoice_page_text":"Comment voulez-vous generer votre musique ?",
+  "tempochoice_page_card1_title":"Chantez par vous meme",
+  "tempochoice_page_card1_subtitle":"L'IA générera de la musique inspirée de votre enregistrement",
+  "tempochoice_page_card2_title":"Paroles ou Requetes",
+  "tempochoice_page_card2_subtitle":"Vous pouvez ajouter vos propres paroles ou demander à l'IA de les générer"
 }

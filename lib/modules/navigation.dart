@@ -4,11 +4,12 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:tempo/theme/theme_constants.dart';
 
 import '../utils/constants.dart';
+import 'home.dart';
 import 'music_generator/pages/tempochoice.dart';
 
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({super.key});
-  static const String routeName = '/';
+  static const String routeName = '/home';
 
   @override
   State<NavigationScreen> createState() => _NavigationScreenState();
@@ -18,9 +19,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _screen = [
-    const Center(
-      child: Text('First'),
-    ),
+    const HomeScreen(),
     const Center(child: Text('Second')),
     const Center(
       child: Text('Third'),
@@ -35,9 +34,6 @@ class _NavigationScreenState extends State<NavigationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Navigation'),
-      ),
       bottomNavigationBar: NavigationBar(
         height: 90,
         elevation: 1,
@@ -51,7 +47,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
               Icons.home,
               color: _selectedIndex == 0 ? white : textColor,
             ),
-            label: AppLocalizations.of(context)!.home,
+            label: AppLocalizations.of(context)!.navigation_home,
           ),
           ElevatedButton(
             onPressed: () {
@@ -80,7 +76,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
               Icons.folder,
               color: _selectedIndex == 2 ? white : textColor,
             ),
-            label: AppLocalizations.of(context)!.library,
+            label: AppLocalizations.of(context)!.navigation_library,
           )
         ],
       ),

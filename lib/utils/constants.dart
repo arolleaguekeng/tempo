@@ -27,6 +27,7 @@ import 'package:tempo/theme/theme_manager.dart';
 // Colors used in this app
 const primaryColor = Color.fromRGBO(51, 171, 189, 1);
 const secondaryColor = Color.fromRGBO(0, 0, 0, 1);
+const darkprimaryColor = Color.fromRGBO(7, 39, 44, 1);
 const bgColor = tonGray2;
 const bgDarkColor = darkTone;
 
@@ -72,6 +73,8 @@ bool defauldIsDark(BuildContext context) {
 }
 
 // Default App Padding
+const basicPagging = 8.0;
 const appPadding = 16.0;
+const largePadding = 32.0;
 
 const googleApiKey = "AIzaSyDkenoJU2mp21o2v4FC9ETAnUGhIKjM1Sc";

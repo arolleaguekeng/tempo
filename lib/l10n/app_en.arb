@@ -5,8 +5,13 @@
     "description": "The current Language"
   },
   "hello": "Hello",
-  "home":"Home",
-  "library":"Library",
-  "tempotitle":"New Tempo",
-  "tempo_text_button":"Photos"
+  "navigation_home":"Home",
+  "navigation_library":"Library",
+  "tempochoice_page_appbar_title":"New Tempo",
+  "tempochoice_page_appbar_text_button":"Photos",
+  "tempochoice_page_text":"How do you want to generate music ?",
+  "tempochoice_page_card1_title":"Sing Yourself",
+  "tempochoice_page_card1_subtitle":"AI will generate music inspired by your recording",
+  "tempochoice_page_card2_title":"Lyrics or prompt",
+  "tempochoice_page_card2_subtitle":"You can add your own lyrics or ask the AI ​​to generate them"
 }

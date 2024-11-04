@@ -6,7 +6,6 @@ import 'firebase_options.dart';
 import 'l10n/l10n.dart';
 
 import 'modules/onboardin/page/launch_screen.dart';
-import 'modules/navigation.dart';
 
 import 'services/api_service.dart';
 import 'theme/theme_constants.dart';

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tempo/modules/auth/services/firebase_auth.dart';
+import 'package:tempo/modules/navigation.dart';
 import 'package:tempo/utils/constants.dart';
 import 'package:tempo/utils/message_dialogs.dart';
 
@@ -67,7 +68,10 @@ class _SignInState extends State<SignIn> {
             buttonText: 'Continue with Apple',
             backgroundColor: darkTon3,
             borderColor: white,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => NavigationScreen()));
+            },
           ),
         ],
       ),
