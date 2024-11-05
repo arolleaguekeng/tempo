@@ -76,5 +76,6 @@ bool defauldIsDark(BuildContext context) {
 const basicPagging = 8.0;
 const appPadding = 16.0;
 const largePadding = 32.0;
+const superLargePadding = 64.0;
 
 const googleApiKey = "AIzaSyDkenoJU2mp21o2v4FC9ETAnUGhIKjM1Sc";

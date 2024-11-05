@@ -13,5 +13,9 @@
   "tempochoice_page_card1_title":"Chantez par vous meme",
   "tempochoice_page_card1_subtitle":"L'IA générera de la musique inspirée de votre enregistrement",
   "tempochoice_page_card2_title":"Paroles ou Requetes",
-  "tempochoice_page_card2_subtitle":"Vous pouvez ajouter vos propres paroles ou demander à l'IA de les générer"
+  "tempochoice_page_card2_subtitle":"Vous pouvez ajouter vos propres paroles ou demander à l'IA de les générer",
+  "tempochoice_singlesong_page_appbar_title":"Nouveau Tempo",
+  "tempochoice_promptsong_page_appbar_title":"Nouveau Tempo",
+  "tempochoice_singlesong_page_button_text":"Créer un tempo",
+  "tempochoice_singlesong_page_textfield_hint":"Titre du Tempo"
 }
