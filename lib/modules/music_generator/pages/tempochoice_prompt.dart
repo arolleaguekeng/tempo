@@ -217,11 +217,20 @@ class _PromptSongState extends State<PromptSong> {
                                   glowShape: BoxShape.circle,
                                   curve: Curves.fastOutSlowIn,
                                   child: isListening
-                                      ? const Icon(Icons.record_voice_over,
-                                          color: white)
-                                      : const Icon(
-                                          Icons.mic,
-                                          color: white,
+                                      ? Padding(
+                                          padding:
+                                              const EdgeInsets.all(appPadding),
+                                          child: const Icon(
+                                              Icons.record_voice_over,
+                                              color: white),
+                                        )
+                                      : Padding(
+                                          padding:
+                                              const EdgeInsets.all(appPadding),
+                                          child: const Icon(
+                                            Icons.mic,
+                                            color: white,
+                                          ),
                                         ),
                                 ),
                               ),
