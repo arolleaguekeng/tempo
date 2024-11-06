@@ -14,10 +14,16 @@
   "tempochoice_page_card1_subtitle":"AI will generate music inspired by your recording",
   "tempochoice_page_card2_title":"Lyrics or prompt",
   "tempochoice_page_card2_subtitle":"You can add your own lyrics or ask the AI ​​to generate them",
-  "tempochoice_singlesong_page_appbar_title":"New Tempo",
-  "tempochoice_promptsong_page_appbar_title":"New Tempo",
+
+  "tempochoice_singlesong_page_appbar_title":"New Tempo", 
   "tempochoice_singlesong_page_button_text":"Create Tempo",
   "tempochoice_singlesong_page_textfield_hint":"Tempo Title",
+  "tempochoice_singlesong_page_textfield_error" : "Title is empty",
   "tempochoice_singlesong_page_dropdown_hint": "Tempo Cathegorie",
-  "tempochoice_singlesong_page_textbutton_title":"Show advance options"
+  "tempochoice_singlesong_page_textbutton_title":"Show advance options",
+
+   "tempochoice_promptsong_page_appbar_title":"New Tempo",
+   "tempochoice_promptsong_page_textfield1_hint":"Create Tempo",
+   "tempochoice_promptsong_page_textfield2_hint":"Enter Tempo prompt here....",
+   "tempochoice_promptsong_page_text":"Enter your own speech"
 }

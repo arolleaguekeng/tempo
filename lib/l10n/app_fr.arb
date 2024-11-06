@@ -7,6 +7,7 @@
   "hello": "Bonjour",
   "navigation_home":"Accueil",
   "navigation_library":"Librairie",
+  
   "tempochoice_page_appbar_title":"Nouveau Tempo",
   "tempochoice_page_appbar_text_button":"Photos",
   "tempochoice_page_text":"Comment voulez-vous generer votre musique ?",
@@ -14,10 +15,16 @@
   "tempochoice_page_card1_subtitle":"L'IA générera de la musique inspirée de votre enregistrement",
   "tempochoice_page_card2_title":"Paroles ou Requetes",
   "tempochoice_page_card2_subtitle":"Vous pouvez ajouter vos propres paroles ou demander à l'IA de les générer",
-  "tempochoice_singlesong_page_appbar_title":"Nouveau Tempo",
-  "tempochoice_promptsong_page_appbar_title":"Nouveau Tempo",
+
+  "tempochoice_singlesong_page_appbar_title":"Nouveau Tempo", 
   "tempochoice_singlesong_page_button_text":"Créer un tempo",
   "tempochoice_singlesong_page_textfield_hint":"Titre du Tempo",
+  "tempochoice_singlesong_page_textfield_error" : "Inserer un titre",
   "tempochoice_singlesong_page_dropdown_hint": "Tempo par categorie",
-  "tempochoice_singlesong_page_textbutton_title":"Options avancés"
+  "tempochoice_singlesong_page_textbutton_title":"Options avancés",
+  
+   "tempochoice_promptsong_page_appbar_title":"Nouveau Tempo",
+   "tempochoice_promptsong_page_textfield1_hint":"Créer un tempo",
+   "tempochoice_promptsong_page_textfield2_hint":"Entrer votre prompt ici....",
+   "tempochoice_promptsong_page_text":"Entrer vos propores paroles"
 }

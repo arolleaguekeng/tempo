@@ -4,6 +4,8 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:tempo/utils/constants.dart';
 import 'package:tempo/utils/responsive.dart';
 
+import '../components/dropDown_card.dart';
+
 class SingleSong extends StatefulWidget {
   const SingleSong({super.key});
 
@@ -97,7 +99,13 @@ class _SingleSongState extends State<SingleSong> {
                         : mysize.width / 3,
                     child: TextFormField(
                       controller: titleController,
-                      validator: (value) {},
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return AppLocalizations.of(context)!
+                              .tempochoice_singlesong_page_textfield_error;
+                        }
+                        return null;
+                      },
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         contentPadding: const EdgeInsets.all(appPadding),
@@ -131,7 +139,7 @@ class _SingleSongState extends State<SingleSong> {
                       value: value,
                       iconSize: 24,
                       isExpanded: true,
-                      icon: Icon(
+                      icon: const Icon(
                         Icons.arrow_drop_down,
                         color: Colors.black,
                       ),
@@ -141,10 +149,11 @@ class _SingleSongState extends State<SingleSong> {
                       hint: Text(
                         AppLocalizations.of(context)!
                             .tempochoice_singlesong_page_dropdown_hint,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: textLightColor,
                         ),
                       ),
+                      borderRadius: BorderRadius.circular(10),
                       items: items.map(buildMenuItem).toList(),
                       onChanged: (value) {
                         setState(() {
@@ -164,7 +173,7 @@ class _SingleSongState extends State<SingleSong> {
                           child: Text(
                             AppLocalizations.of(context)!
                                 .tempochoice_singlesong_page_textbutton_title,
-                            style: TextStyle(
+                            style: const TextStyle(
                               color: primaryColor,
                               fontSize: 16,
                             ),
@@ -181,15 +190,4 @@ class _SingleSongState extends State<SingleSong> {
       ),
     );
   }
-
-  DropdownMenuItem buildMenuItem(String item) => DropdownMenuItem(
-        value: item,
-        child: Text(
-          item,
-          style: TextStyle(
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      );
 }
