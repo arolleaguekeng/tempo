@@ -85,10 +85,12 @@ class _SingleSongState extends State<SingleSong> {
                     ),
                   ),
                   Container(
-                    margin:
-                        const EdgeInsets.symmetric(vertical: superLargePadding),
-                    padding: const EdgeInsets.only(
-                        left: appPadding, right: appPadding),
+                    margin: const EdgeInsets.only(
+                      top: superLargePadding,
+                      bottom: appPadding,
+                      left: appPadding,
+                      right: appPadding,
+                    ),
                     height: 60.0,
                     width: Responsive.isMobile(context)
                         ? mysize.width
@@ -111,20 +113,37 @@ class _SingleSongState extends State<SingleSong> {
                   ),
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: appPadding),
-                    padding: const EdgeInsets.symmetric(
-                        vertical: appPadding, horizontal: appPadding),
+                    padding: const EdgeInsets.all(appPadding),
                     height: 60.0,
+                    decoration: BoxDecoration(
+                      border: const Border(
+                        bottom: BorderSide(
+                          color: textColor,
+                          width: 1.0,
+                        ),
+                      ),
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
                     width: Responsive.isMobile(context)
                         ? mysize.width
                         : mysize.width / 3,
-                    decoration: BoxDecoration(),
                     child: DropdownButton(
                       value: value,
-                      iconSize: 36,
+                      iconSize: 24,
                       isExpanded: true,
                       icon: Icon(
                         Icons.arrow_drop_down,
                         color: Colors.black,
+                      ),
+                      style: const TextStyle(
+                        color: textColor,
+                      ),
+                      hint: Text(
+                        AppLocalizations.of(context)!
+                            .tempochoice_singlesong_page_dropdown_hint,
+                        style: TextStyle(
+                          color: textLightColor,
+                        ),
                       ),
                       items: items.map(buildMenuItem).toList(),
                       onChanged: (value) {
@@ -132,6 +151,26 @@ class _SingleSongState extends State<SingleSong> {
                           this.value = value;
                         });
                       },
+                    ),
+                  ),
+                  Container(
+                    margin: const EdgeInsets.only(left: appPadding),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            AppLocalizations.of(context)!
+                                .tempochoice_singlesong_page_textbutton_title,
+                            style: TextStyle(
+                              color: primaryColor,
+                              fontSize: 16,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
