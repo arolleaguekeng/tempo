@@ -58,8 +58,8 @@ TextTheme textTheme(BuildContext context) {
 }
 
 bool themeIsDark(BuildContext context) {
-  ThemeMode themeMode = ThemeMode.light;
-  if (Provider.of<ThemeManager>(context).themeMode == ThemeMode.dark) {
+  ThemeMode themeMode = ThemeMode.dark;
+  if (Provider.of<ThemeManager>(context).themeMode == themeMode) {
     return true;
   } else {
     return false;

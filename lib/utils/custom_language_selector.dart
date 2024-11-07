@@ -13,7 +13,7 @@ class CustomLanguageSelector extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final provider = Provider.of<LocaleProvider>(context);
-    final locale = provider.locale ?? const Locale('en');
+    final locale = provider.locale;
     return DropdownButton<Locale>(
       isExpanded: true,
       items: L10n.all.map(
