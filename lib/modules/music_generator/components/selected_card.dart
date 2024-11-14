@@ -12,7 +12,7 @@ Widget cardSelected({
     child: Container(
       margin: const EdgeInsets.symmetric(vertical: basicPagging),
       child: Card(
-        color: darkprimaryColor,
+        color: primaryColor,
         elevation: 5,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
@@ -22,7 +22,7 @@ Widget cardSelected({
           title: Text(
             title,
             style: const TextStyle(
-              color: primaryColor,
+              color: white,
               fontSize: 28,
               fontWeight: FontWeight.bold,
             ),
@@ -33,7 +33,7 @@ Widget cardSelected({
             child: Text(
               subtitle,
               style: const TextStyle(
-                color: primaryColor,
+                color: white,
                 fontSize: 12,
               ),
               textAlign: TextAlign.end,

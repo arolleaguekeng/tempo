@@ -10,7 +10,7 @@ List<Post> generateRandomPosts(int count) {
       artist: "@Coldplay",
       description: "The most satisfying job",
       hashtags: [hashtagsList[random.nextInt(hashtagsList.length)]],
-      avatarImage: music2,
+      avatarImage: music3,
       backgroundImage: 'assets/images/music1.jpg',
       likes: random.nextInt(100000),
       comments: random.nextInt(1000),

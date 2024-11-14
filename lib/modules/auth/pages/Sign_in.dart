@@ -21,7 +21,7 @@ class _SignInState extends State<SignIn> {
       backgroundColor: secondaryColor,
       appBar: AppBar(
         backgroundColor: secondaryColor,
-        iconTheme: IconThemeData(color: white),
+        iconTheme: const IconThemeData(color: white),
       ),
       body: Column(
         children: [
@@ -36,14 +36,14 @@ class _SignInState extends State<SignIn> {
             ),
           ),
           //=================googele========================================//
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Text(
+          const Text(
             "Let’s get you in",
             style: TextStyle(color: white, fontSize: 43),
           ),
-          SizedBox(
+          const SizedBox(
             height: 50,
           ),
           CustomElevatedButton(
@@ -52,7 +52,6 @@ class _SignInState extends State<SignIn> {
             backgroundColor: darkTon3,
             borderColor: white,
             onPressed: () async {
-              var user = await AuthService.signInWithGoogle();
               if (AuthService.auth.currentUser != null) {
                 Navigator.pushNamed(context, '/home');
               } else {
@@ -60,7 +59,7 @@ class _SignInState extends State<SignIn> {
               }
             },
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           //=================apple========================================//

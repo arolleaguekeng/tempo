@@ -35,8 +35,6 @@ dependencies:
   # Use with the CupertinoIncos class for iOS style icons.
   cupertino_icons: ^1.0.6
 
-
-
   # A package to persist key-value pairs locally.
   shared_preferences: ^2.2.0
 
@@ -131,6 +129,9 @@ dependencies:
   infinite_scroll_pagination: ^4.0.0
 
   infinite_scroll: ^1.1.1
+
+  #Convert your speech to text
+  speech_to_text: ^7.0.0
 
 dev_dependencies:
   flutter_launcher_icons: "^0.14.1"
