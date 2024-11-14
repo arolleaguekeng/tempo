@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tempo/modules/auth/services/firebase_auth.dart';
 import 'package:tempo/modules/navigation.dart';
 import 'package:tempo/utils/constants.dart';
+import 'package:tempo/utils/image_path.dart';
 import 'package:tempo/utils/message_dialogs.dart';
 
 import '../components/custom_signin_button.dart';
@@ -28,7 +29,7 @@ class _SignInState extends State<SignIn> {
             padding: const EdgeInsets.only(top: 90),
             child: Center(
               child: Image.asset(
-                "assets/icons/logo_dark.png",
+                logo_dark,
                 width: 200,
                 height: 200,
               ),
