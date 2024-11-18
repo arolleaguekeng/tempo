@@ -10,7 +10,7 @@ Widget cardSelected({
   return GestureDetector(
     onTap: onTap,
     child: Container(
-      margin: const EdgeInsets.symmetric(vertical: basicPagging),
+      margin: const EdgeInsets.symmetric(vertical: basicPadding,horizontal: smallPadding),
       child: Card(
         color: primaryColor,
         elevation: 5,
@@ -29,7 +29,7 @@ Widget cardSelected({
             textAlign: TextAlign.end,
           ),
           subtitle: Padding(
-            padding: const EdgeInsets.all(basicPagging),
+            padding: const EdgeInsets.all(basicPadding),
             child: Text(
               subtitle,
               style: const TextStyle(

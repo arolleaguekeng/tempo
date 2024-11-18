@@ -266,8 +266,10 @@ class _PromptSongState extends State<PromptSong> {
                   Container(
                     margin: const EdgeInsets.symmetric(horizontal: appPadding),
                     padding: const EdgeInsets.all(appPadding),
-                    height: 60.0,
+                    height: 60.0
+                    ,
                     decoration: BoxDecoration(
+
                       border: const Border(
                         bottom: BorderSide(
                           color: textColor,
@@ -280,6 +282,7 @@ class _PromptSongState extends State<PromptSong> {
                         ? mysize.width
                         : mysize.width / 3,
                     child: DropdownButton(
+                      underline: Container(),
                       value: value,
                       iconSize: 24,
                       isExpanded: true,

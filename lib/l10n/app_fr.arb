@@ -26,5 +26,8 @@
    "tempochoice_promptsong_page_appbar_title":"Nouveau Tempo",
    "tempochoice_promptsong_page_textfield1_hint":"Créer un tempo",
    "tempochoice_promptsong_page_textfield2_hint":"Entrer votre prompt ici....",
-   "tempochoice_promptsong_page_text":"Entrer vos propores paroles"
+   "tempochoice_promptsong_page_text":"Entrer vos propores paroles",
+
+   "tempochoice_songpage_page_appbar_leading_title":"JOUER DE LA PLAYLIST",
+   "tempochoice_songpage_page_imageupdate_title":"Modifier"
 }

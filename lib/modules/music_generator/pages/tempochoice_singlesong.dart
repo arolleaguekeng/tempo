@@ -93,6 +93,15 @@ class _SingleSongState extends State<SingleSong> {
                       left: appPadding,
                       right: appPadding,
                     ),
+                    decoration: BoxDecoration(
+                      border: const Border(
+                        bottom: BorderSide(
+                          color: textColor,
+                          width: 0.5,
+                        ),
+                      ),
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
                     height: 60.0,
                     width: Responsive.isMobile(context)
                         ? mysize.width
@@ -107,6 +116,7 @@ class _SingleSongState extends State<SingleSong> {
                         return null;
                       },
                       decoration: InputDecoration(
+                        fillColor: white,
                         border: InputBorder.none,
                         contentPadding: const EdgeInsets.all(appPadding),
                         hintText: AppLocalizations.of(context)!
@@ -116,7 +126,14 @@ class _SingleSongState extends State<SingleSong> {
                           color: textColor,
                           fontSize: 14.0,
                         ),
+                        enabledBorder: const OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                        ),
+                        focusedBorder: const OutlineInputBorder(
+                          borderSide: BorderSide.none,
+                        ),
                       ),
+
                     ),
                   ),
                   Container(
@@ -136,6 +153,7 @@ class _SingleSongState extends State<SingleSong> {
                         ? mysize.width
                         : mysize.width / 3,
                     child: DropdownButton(
+                      underline: Container(),
                       value: value,
                       iconSize: 24,
                       isExpanded: true,

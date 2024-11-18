@@ -48,6 +48,7 @@ const textLightColor = Color.fromRGBO(184, 191, 204, 1.0);
 const transparent = Colors.transparent;
 const grey = Color.fromRGBO(148, 170, 220, 1);
 const white = Color.fromRGBO(255, 255, 255, 1.0);
+const black = Colors.black;
 const purple = Color.fromRGBO(165, 80, 179, 1);
 const orange = Color.fromRGBO(251, 137, 13, 1);
 const green = Color.fromRGBO(3, 176, 107, 1);
@@ -73,7 +74,8 @@ bool defauldIsDark(BuildContext context) {
 }
 
 // Default App Padding
-const basicPagging = 8.0;
+const smallPadding =  5.0;
+const basicPadding = 8.0;
 const appPadding = 16.0;
 const largePadding = 32.0;
 const superLargePadding = 64.0;

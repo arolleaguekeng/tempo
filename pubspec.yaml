@@ -100,6 +100,9 @@ dependencies:
 
   # A package to play audio files in Flutter applications.
   just_audio: ^0.9.40
+  just_audio_background:
+  audio_video_progress_bar:
+  rxdart: ^0.28.0
 
   # A package to create audio waveforms in Flutter applications.
   audio_waveforms: ^1.0.5
@@ -174,6 +177,7 @@ flutter:
   assets:
     - assets/images/
     - assets/icons/
+    - assets/audios/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

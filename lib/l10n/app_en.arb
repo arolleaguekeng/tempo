@@ -25,5 +25,8 @@
    "tempochoice_promptsong_page_appbar_title":"New Tempo",
    "tempochoice_promptsong_page_textfield1_hint":"Create Tempo",
    "tempochoice_promptsong_page_textfield2_hint":"Enter Tempo prompt here....",
-   "tempochoice_promptsong_page_text":"Enter your own speech"
+   "tempochoice_promptsong_page_text":"Enter your own speech",
+
+    "tempochoice_songpage_page_appbar_leading_title":"PLAYING FROM PLAYLIST",
+    "tempochoice_songpage_page_imageupdate_title":"Edit"
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:tempo/modules/music_generator/components/selected_card.dart';
 import 'package:tempo/modules/music_generator/pages/tempochoice_prompt.dart';
+import 'package:tempo/modules/music_generator/pages/tempochoice_songpage.dart';
 import 'package:tempo/utils/constants.dart';
 import 'package:tempo/utils/helper_widgets.dart';
 import 'tempochoice_singlesong.dart';
@@ -25,7 +26,16 @@ class _TempochoiceState extends State<Tempochoice> {
         ),
         actions: [
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SongScreen();
+                  },
+                ),
+              );
+            },
             child: Text(
               AppLocalizations.of(context)!.tempochoice_page_appbar_text_button,
             ),
