@@ -17,10 +17,10 @@ class Controls extends StatelessWidget {
           if (processingState == ProcessingState.loading ||
               processingState == ProcessingState.buffering) {
             return Container(
-              margin: EdgeInsets.all(8.0),
+              margin: const EdgeInsets.all(8.0),
               width: 64.0,
               height: 64.0,
-              child: CircularProgressIndicator(),
+              child: const CircularProgressIndicator(),
             );
           } else if (playing != true) {
             return IconButton(
@@ -37,7 +37,7 @@ class Controls extends StatelessWidget {
             );
           } else {
             return IconButton(
-              icon: Icon(Icons.replay),
+              icon: const Icon(Icons.replay),
               iconSize: 64.0,
               onPressed: () => audioPlayer.seek(Duration.zero, index: 0),
             );
