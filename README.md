@@ -1,6 +1,6 @@
 # Tempo
 
-Application de covoiturage intra et extra urbain
+AI music generator
 
 ## Getting Started
 
